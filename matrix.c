@@ -71,7 +71,7 @@ int multiple_matrixes(const LPMATRIX a, const LPMATRIX b, LPMATRIX c) {
 			sum = 0;
 			for (int dummy = 0; dummy < a->cols; dummy++) {
 				sum += get_matrix_element(a, i, dummy) * get_matrix_element(b, dummy, j);
-				if ((ret = set_matrix_element(c, i, j, sum)) < 0) {
+				if ((ret = set_matrix_element(c, i, j, sum)) != 0) {
 					return ret;
 				}
 			}
